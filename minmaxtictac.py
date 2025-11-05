@@ -64,7 +64,7 @@ def play():
     print("You are O and AI is X")
 
     while True:
-        # Player move
+        
         while True:
             player_move = int(input("Enter your move (0-8): "))
             if 0 <= player_move <= 8 and board[player_move] == '':
@@ -75,13 +75,12 @@ def play():
 
         pboard(board)
         if win(board) == 'O':
-            print("🎉 You win!")
+            print("You win!")
             break
         if isfull(board):
             print("It's a draw!")
             break
 
-        # AI move
         ai_move = best_move(board)
         board[ai_move] = 'X'
         print(f"AI chose position {ai_move}")
