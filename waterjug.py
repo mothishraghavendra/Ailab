@@ -28,7 +28,7 @@ def bfs(start,goal):
     return None
 
 start = (0, 0)
-goal = (2, 0)  # want 2 liters in jug A
+goal = (2, 0) 
 solution = bfs(start, goal)
 print("Solution path:")
 for step in solution:
