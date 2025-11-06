@@ -10,14 +10,14 @@ def g(N):
     return items
 def bag(N):
     s = random.choice((2.5,1,4.0))
-    size = int(s * N)
+    size = s * N
     return size
 
 start = time.time()
 
 def knapsack(items,Max_size):
     N = len(items)
-    best_value = 0
+    best_value = 0;
     best_combination = []
     for r in range(1,N+1):
         for combo in combinations(items,r):
@@ -40,5 +40,6 @@ for N in problem_sizes:
         value,combination = knapsack(items,size)
         end=time.time()
         times.append(end-start)
-    avg_time = sum(times)/len(times)
-    print(f"N = {N} and average time = {avg_time:.4f} Seconds")
+    avg_tim = sum(times)/len(times)
+    print(f"N = {N} and average time = {avg_tim:.4f} Seconds")
+                
